@@ -14,30 +14,30 @@
     <link rel='stylesheet' href='css/reset.css'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href='css/styles.css'>
+    <link rel='stylesheet' href='css/styles.css' type='text/css'>
+    <link rel='stylesheet' href='css/animate.css' >
     <link rel='stylesheet' href='css/bootstrap.min.css' >
    
-
 
 
     <!--jQuery-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/viewpointchecker.js"></script>
     <script src='js/jquery.scrollmagic.min.js'></script>
-    <script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script> <!--Debugging purposes-->
 
 
   </head>
 
   <body>
-
-    <!-- Fixed navbar -->
+    <!-- navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only"></span>
             <i class="fa fa-bars"></i>
           </button>
           <h1 class="logo">Darrel<span class="lastname"> Raymundo</span></h1> 
@@ -60,8 +60,8 @@
 
       <div id="parallax1" class="parallaxParent">
         <div class="splash">
-          <h1 class="splash-text">Hi there, I'm <span class="span-tagline"> Darrel Raymundo.</span></h1>
-          <h2 class="tagline">Photographer & Cinematographer</h2>
+          <h1 class="splash-text animated fadeInDown">Hi there, I'm <span class="span-tagline"> Darrel Raymundo.</span></h1>
+          <h2 class="tagline animated slideInUp">Photographer & Cinematographer</h2>
           <button id="fadeIn" class="btn text-center btn-default">View my work</button>
 
         </div>
@@ -70,7 +70,24 @@
         <div class="photo">
           <h2 class="subHeaders">Photography</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquet lacinia ornare. </p>
+
+          <div id="grid" data-columns>
+            <div class="column size-1of3">
+             <img src="http://lorempixel.com/400/200" />
+              <img src="http://lorempixel.com/400/200" />
+            </div>
+            <div class="column size-1of3">
+           <img src="http://lorempixel.com/400/200" />
+              <img src="http://lorempixel.com/400/200" />
+            
+            </div>
+            <div class="column size-1of3">
+             <img src="http://lorempixel.com/400/200" />
+              <img src="http://lorempixel.com/400/200" />
+            
+            </div>
         </div>
+      </div>
      
       
       <div id="parallax2" class="parallaxParent">
@@ -94,7 +111,7 @@
 
 
 
-
+  <script src='js/salvattore.min.js'></script>
   <script src='js/app.js'></script>
 
   </body>
