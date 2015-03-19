@@ -28,6 +28,31 @@
     <script src='js/jquery.scrollmagic.min.js'></script>
     <script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script> <!--Debugging purposes-->
 
+  <script src='js/salvattore.min.js'></script>
+<style type="text/css">
+      @media screen and (max-width: 480px){
+        #grid[data-columns]::before {
+          content: '1 .column.size-1of1';
+        }
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        #grid[data-columns]::before {
+          content: '2 .column.size-1of2';
+        }
+      }
+      @media screen and (min-width: 769px) {
+        #grid[data-columns]::before {
+          content: '3 .column.size-1of3';
+        }
+      }
+
+      /* Again, you’re free to use and define the classes: */
+      .column { float: left; }
+      .size-1of1 { width: 100%; }
+      .size-1of2 { width: 50%; }
+      .size-1of3 { width: 33.333%; }       
+    </style>
 
   </head>
 
@@ -70,24 +95,26 @@
         <div class="photo">
           <h2 class="subHeaders">Photography</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquet lacinia ornare. </p>
+          
 
-          <div id="grid" data-columns>
+          <div id="grid"  data-columns>
             <div class="column size-1of3">
-             <img src="http://lorempixel.com/400/200" />
-              <img src="http://lorempixel.com/400/200" />
+              <div><img src="img/boba2.png" /></div>
+              <div><img src="img/boba2.png" /></div>
+           
             </div>
             <div class="column size-1of3">
-           <img src="http://lorempixel.com/400/200" />
-              <img src="http://lorempixel.com/400/200" />
-            
+              <div><img src="img/boba2.png" /></div>
+              <div><img src="img/boba2.png" /></div>  
             </div>
             <div class="column size-1of3">
-             <img src="http://lorempixel.com/400/200" />
-              <img src="http://lorempixel.com/400/200" />
-            
+              <div><img src="img/boba2.png" /></div>
+              <div><img src="img/boba2.png" /></div>
+
             </div>
+          </div>
+
         </div>
-      </div>
      
       
       <div id="parallax2" class="parallaxParent">
@@ -111,7 +138,6 @@
 
 
 
-  <script src='js/salvattore.min.js'></script>
   <script src='js/app.js'></script>
 
   </body>
