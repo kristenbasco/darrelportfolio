@@ -145,6 +145,7 @@ $transparent: transparent !important;
 .navbar-default{
   background-color: black!important;
   border-color: $transparent;
+  padding: 5px 0 5px 0;
 
 	h1.logo{
 		color: $white;
@@ -249,6 +250,7 @@ $transparent: transparent !important;
 
 
 
+
 @media(max-width:767px){
 	
 	.navbar-default{
@@ -267,8 +269,13 @@ $transparent: transparent !important;
 			font-size: 1.3em;
 		}
 	}
+	.navbar .navbar-nav>li>a{
+		text-align: center;
+	}
 
-
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+		border-color: $transparent;
+	}
 
 }
 
