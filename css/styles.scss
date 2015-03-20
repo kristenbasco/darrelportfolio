@@ -1,5 +1,20 @@
+.fa-bars{
+  color: #f4f4f4;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
 
-$white: #f4f4f4;
+.fa-bars:hover{
+  color: #d48f8f;
+  cursor: pointer;
+
+}
+
+
+
+$white: #f4f4f4!important;
 $yellow:#f6cd4c;
 $teal: #29837e;
 $transparent: transparent !important;
@@ -53,6 +68,7 @@ $transparent: transparent !important;
 
 *{
 	font-family: 'Raleway', sans-serif!important;
+	border-radius: 0px !important;
 }
  
 .container-fluid{
@@ -75,8 +91,52 @@ $transparent: transparent !important;
 
 
 
+/******* Default Nav ********/ 
+ 
+
+.fa-bars{
+  	color: #f4f4f4 !important;
+
+  	&:hover{
+  		color:  #FF7A00;
+  	}
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+		background-color: transparent !important;
+	}
+
+	.navbar-default .navbar-toggle{
+		border: none !important;
+		border-color: none !important;
+		margin-top: 14px !important;
+		color: white;
+	}
+
+.navbar .navbar-nav>li>a{
+	color: $white;
+	font-weight: 400;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: $white;
+	@include fadeTransition;
+
+
+}
+
+.icon-bar:hover{
+			background-color: $yellow;
+		cursor: pointer;
+}
+
+
+
 /******* Navigation ********/ 
  
+
+
+
 #navbar{
 	padding-top: 10px!important;
 }
@@ -85,11 +145,7 @@ $transparent: transparent !important;
 .navbar-default{
   background-color: black!important;
   border-color: $transparent;
- 
 
-  .fa{
-  	color: $white;
-  }
 	h1.logo{
 		color: $white;
 	  	font-size: 2em;
@@ -149,7 +205,7 @@ $transparent: transparent !important;
 
 	.btn-default{
 
-	  	width: 10% !important;
+	  	width: 130px!important;
 	  	padding: 4px!important;
 	  	border-radius: 0 !important;
 	  	background: transparent;
@@ -190,4 +246,37 @@ $transparent: transparent !important;
 
 
 /******* Added Media Queries ********/ 
+
+
+
+@media(max-width:767px){
+	
+	.navbar-default{
+		h1.logo{
+			font-size: 1.4em;
+			margin-left: 20px;
+		}
+	}
+
+	.splash{
+		h1.splash-text{
+			font-size: 2.5em;
+		}
+
+		h2.tagline{
+			font-size: 1.3em;
+		}
+	}
+
+
+
+}
+
+
+
+
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
 
