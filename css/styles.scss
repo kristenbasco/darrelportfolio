@@ -169,7 +169,7 @@ $transparent: transparent !important;
  
 
 .splash{
-	/*padding-top: 90px;*/
+	
 	background-image: 
 		linear-gradient(
           rgba(0, 0, 0, 0.62),
@@ -227,13 +227,14 @@ $transparent: transparent !important;
 
 .photo{
 	
-	height: 600px;
+	height: 1000px;
 	p{
 		text-align: center;
 	}
 	h2.subHeaders{
 		@include subheaders;
 	}
+
 }
 
 .img2{
@@ -261,7 +262,9 @@ $transparent: transparent !important;
 	}
 
 	.splash{
+
 		h1.splash-text{
+			padding-top: 70vh;
 			font-size: 2.5em;
 		}
 
@@ -277,13 +280,47 @@ $transparent: transparent !important;
 		border-color: $transparent;
 	}
 
+	.photo{
+		
+		height: 1000px;
+		p{
+			text-align: center;
+		}
+		h2.subHeaders{
+			@include subheaders;
+		}
+
+		.grid{
+			margin: 0 auto;
+			display: block;
+			
+		}
+	}
+
+
+
 }
 
 
 
 
-@media(min-width:768px){}
-@media(min-width:992px){}
-@media(min-width:1200px){}
+@media(min-width:768px){
+	
+	.splash{
+		padding-top: 10vh;
+	}
+
+
+}
+
+
+@media(min-width:992px){
+
+
+}
+@media(min-width:1200px){
+
+
+}
 
 
