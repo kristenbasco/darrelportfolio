@@ -19,6 +19,9 @@
     <link rel='stylesheet' href='css/animate.css' >
     <link rel='stylesheet' href='css/bootstrap.min.css' >
     <link rel="stylesheet" href="css/lightbox.css"/>
+    <link rel="stylesheet" href="css/set1.css"/>
+    <link rel="stylesheet" href="css/animatescroll.css"/>
+
 
 
     <!--jQuery-->
@@ -30,14 +33,10 @@
     <script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script> <!--Debugging purposes-->
     <script src='js/gridify-min.js'></script>
     <script src="js/lightbox.min.js"></script>
-
-
-<style>
-
+    <script src="js/animatescroll.js"></script>
 
 
 
-</style>
   </head>
 
   <body>
@@ -57,9 +56,10 @@
         <div id="navbar" class="navbar-collapse collapse">
      
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Photography</a></li>
-            <li><a href="#">Cinematography</a></li>
-            <li><a href="#">About</a></li>
+            <li><a onclick="$('#photography').animatescroll();">Photography</a></li>
+            <li><a onclick="$('#cinematography').animatescroll();">Cinematography</a></li>
+            <li><a onclick="$('#aboutme').animatescroll();">About Me</a></li>
+            <li><a onclick="$('#parallax3').animatescroll();">Contact</a></li>
             
           </ul>
         </div><!--/.nav-collapse -->
@@ -70,48 +70,162 @@
       
 
       <div id="parallax1" class="parallaxParent">
-        <div class="splash">
+        <div id="home" class="splash">
           <h1 class="splash-text animated fadeInDown">Hi there, I'm <span class="span-tagline"> Darrel Raymundo.</span></h1>
           <h2 class="tagline animated slideInUp">Photographer & Cinematographer</h2>
-          <button id="fadeIn" class="btn text-center btn-default">View my work </button>
+          <a onclick="$('#photography').animatescroll();"><button id="fadeIn" class="btn text-center btn-default">View my work </button></a>
 
         </div>
       </div>
      
-        <div class="photo">
+        <div id="photography" class="photo">
           <h2 class="subHeaders">Photography</h2>
           <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquet lacinia ornare. </p>
           
           <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-sm-4  col-md-4"><img src="img/bts/bts17.jpg" class="cat" width="400"></div>
-              <div class="col-xs-12 col-sm-4  col-md-4"><img src="img/portraits/portraits1.jpg" class="cat" width="400"></div>
-              <div class="col-xs-12 col-sm-4  col-md-4"><img src="img/things/things9.jpg" class="cat"width="400"></div>
-            </div>
+             <div class="grid1">
+              <div class="row">
+                <div class="col-xs-12 col-sm-4  col-md-4"> 
+                  <figure class="effect-honey">
+                    <img src="img/bts/bts17.jpg" class="cat" width="400">
+                    <figcaption>
+                      <h2>Behind the <span>Scenes</span></h2>
+                    
+                      <a href="google.com">View more</a>
+                    </figcaption>     
+                  </figure>
+                </div>
+                <div class="col-xs-12 col-sm-4  col-md-4">
 
-            <div class="row">
-              <div class="col-xs-12  col-sm-4 col-md-4"><img src="img/experiments/exp27.jpg" class="cat" width="400"></div>
-              <div class="col-xs-12  col-sm-4 col-md-4"><img src="img/macro/macro8.jpg" class="cat" width="400"></div>
-              <div class="col-xs-12 col-sm-4 col-md-4"><img src="img/scenary/scene3.jpg" class="cat" width="400"></div>
+                  <figure class="effect-honey">
+                    <img src="img/lifestyle/life21.jpg" class="cat" width="400">
+                    <figcaption>
+                      <h2>Life<span>styles</span></h2>
+                      <a href="#">View more</a>
+                    </figcaption>     
+                  </figure>
+                </div>
+
+                <div class="col-xs-12 col-sm-4  col-md-4">
+
+                  <figure class="effect-honey">
+                    <img src="img/things/things9.jpg" class="cat"width="400">
+                    <figcaption>
+                      <h2>Thi<span>ngs</span></h2>
+          
+                      <a href="#">View more</a>
+                    </figcaption>     
+                  </figure>
+
+                </div>
+
+              </div><!--row-->
+
+              <div class="row">
+                <div class="col-xs-12  col-sm-4 col-md-4">
+                  <figure class="effect-honey">
+                    <img src="img/experiments/exp27.jpg" class="cat" width="400">
+                    <figcaption>
+                      <h2>Experi<span>ments</span></h2>
+                     
+                      <a href="#">View more</a>
+                    </figcaption>     
+                  </figure>
+                </div>
+
+                <div class="col-xs-12  col-sm-4 col-md-4">
+
+
+                  <figure class="effect-honey">
+                      <img src="img/macro/macro8.jpg" class="cat" width="400">
+                    <figcaption>
+                      <h2>Ma<span>cro</span></h2>
+                
+                      <a href="#">View more</a>
+                    </figcaption>     
+                  </figure>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  
+                  <figure class="effect-honey">
+                      <img src="img/scenary/scene3.jpg" class="cat" width="400">
+                    <figcaption>
+                      <h2>Sce<span>nary</span></h2>
+                      <a href="#">View more</a>
+                    </figcaption>     
+                  </figure>
+                </div>
+
+              </div><!--row-->
+
             </div>
           </div>
 
-
-
+        
         </div>
+
+      <div id="cinematography" class="break"></div>
+        <div class="cinema">
+         <h2 class="subHeaders">Cinematography</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquet lacinia ornare. </p>
+            
+            <div class="container">
+             
+              <div class="col-xs-12 col-md-12 text-center pad">
+                <div class="video responsive-video">
+                  <iframe src="https://player.vimeo.com/video/93771435" width="400" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+     
+
+
+                </div>
+              </div>
+
+
+              <div class="col-xs-12 col-md-12 text-center pad">
+                <div class="video responsive-video">
+                  <iframe src="https://player.vimeo.com/video/99999582" width="400" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                </div>
+              </div>
+
+              <div class="col-xs-12 col-md-12 text-center pad">
+                <div class="video responsive-video">
+                 <iframe src="https://player.vimeo.com/video/122598510" width="400" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                </div>
+              </div>
+
+          
+
+            </div>
+        </div>
+
+
      
       
-      <div id="parallax2" class="parallaxParent">
-        <div class="img2"></div>
-      </div>
-    
-        <div class="cinema">
-          <p>Content 2</p>
-          <i class="fa fa-bars fa-2x"></i>
+      <div id="aboutme" class="about">
+
+        <div class="container">
+          <h2 class="subHeaders">About Me</h2>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-6 text-center">
+              <img class="me" src="img/logo.svg">
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <p class="about-description">My name is Darrel Raymundo and I am a photographer, cinematographer, and 3D artist.  I am striving to complete my last semester in the Florida State University's motion picture and digital arts program.
+
+                <span class="resume"><a href="img/resume.png">Download Resume</a></span>
+              </p>
+            </div>
+          </div><!--row-->
         </div>
-      
+
+      </div>
    
-      <div id="parallax3" class="parallaxParent">
+      <div id="parallax3" class="parallaxParent ps">
         <div class="img3"></div>
       </div>
   
@@ -119,6 +233,18 @@
 
 
   <script src='js/app.js'></script>
+  <script>
+  $(document).ready(function() {
+    $('#fadeUp').addClass('animated fadeInUp'); 
+    $('#fadeIn').addClass('animated fadeIn'); 
+    $('#bounce').addClass('animated bounce'); 
+     
+    $('.adobe').css('width', '90%');
+    $('.html').css('width', '95%');
+    $('.css').css('width', '95%');
+
+});
+  </script>
 
   </body>
 </html>

@@ -17,6 +17,10 @@ $yellow:#f6cd4c;
 $teal: #29837e;
 $transparent: transparent !important;
 
+
+@mixin bottom{
+	padding-bottom:60px;
+}
 @mixin center{
 	margin: 0 auto;
 	padding: 0;
@@ -32,6 +36,18 @@ $transparent: transparent !important;
 	padding-bottom: 15px;
 	padding-top: 35px;
 
+}
+@mixin format{
+	p{
+		text-align: center;
+	}
+	h2.subHeaders{
+		@include subheaders;
+	}
+
+	p.description{
+		padding-bottom: 20px;
+	}
 }
 
 #grid[data-columns]::before {
@@ -51,6 +67,12 @@ $transparent: transparent !important;
 	transition: background 0.3s ease-out;
 }
 
+@mixin textTransition{
+	-webkit-transition: color 0.3s ease-out;
+	-moz-transition: color 0.3s ease-out;
+	-o-transition: color 0.3s ease-out;
+	transition: color 0.3s ease-out;
+}
 
 
 #grid[data-columns]::before {
@@ -61,6 +83,24 @@ $transparent: transparent !important;
 .column { float: left; }
 .size-1of3 { width: 33.333%; }
 
+
+a{
+	color: $white;
+	@include textTransition;
+	text-decoration: none!important;
+}
+a:hover{
+	cursor: pointer;
+	color: $teal;
+	text-decoration: none!important;
+
+}
+p{
+	font-size: 1.2em;
+}
+.white{
+	color: $white;
+}
 
 img{
 	width: 100%!important;
@@ -127,8 +167,8 @@ img{
 }
 
 .icon-bar:hover{
-			background-color: $yellow;
-		cursor: pointer;
+	background-color: $yellow;
+	cursor: pointer;
 }
 
 
@@ -179,8 +219,7 @@ img{
         url("../img/File8.jpg");
 		background-position: center center;
 	  	background-repeat: no-repeat;
-	  	background-attachment: fixed;
-	  	background-size: cover;
+
 
 
 	h1.splash-text{
@@ -228,9 +267,10 @@ img{
 	}
 }
 
+/******* PHOTOGRAPHY ********/ 
+
 .photo{
 	
-
 	p{
 		text-align: center;
 	}
@@ -245,18 +285,109 @@ img{
 }
 
 .img2{
-	background-image: url("../img/2.jpeg");
+background-image: 
+		linear-gradient(
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+       	url("../img/b2.jpg");
+		background-position: center center;
+	  	background-repeat: no-repeat;
+
 }
+
+
+
+
 
 .img3{
-	background-image: url("../img/3.jpg");
+	background-image: 	
+		linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("../img/scenary/scene3.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+  
+}
+
+/******* BREAK ********/ 
+
+/*.break{
+	background: $yellow;
+	height: 8px;
+}*/
+
+
+/******* CINEMATAGRAPHY ********/ 
+
+
+.cinema{
+	background: #EEECEA;
+	@include format;
+	@include bottom;
+	padding-top: 5px;
+	.pad{
+		margin: 2px;
+
+	}
+}
+
+.video{
+	margin: 0 auto!important;
+	display: block;
+}
+
+/******* ABOUT ********/ 
+
+.about{
+	@include format;
+	padding: 0 25px 0 25px;
+	background: $yellow;
+	img.me{
+		width: 300px!important;
+		height: auto;
+	}
+	@include bottom;
+
+}
+
+p.about-description{
+
+	text-align: left;
+	
+}
+
+span.resume{
+	padding-top: 15px;
+	display: block;
 }
 
 
 
-/******* BOOTSTRAP ********/ 
+/******* RESPONSIVE VIDEO ********/ 
 
 
+.responsive-video {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 60px; overflow: hidden;
+
+}
+
+
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
 
 
 
@@ -279,8 +410,6 @@ img{
 		}
 	}
 
-
-
 	.splash{
 
 		h1.splash-text{
@@ -302,10 +431,8 @@ img{
 
 	.photo{
 
+		height: auto;
 
-
-
-	
 		p{
 			text-align: center;
 		}
@@ -319,24 +446,17 @@ img{
 			
 		}
 
-
-		img.cat{
-
-		}
 	}
 
+}
+
+@media(min-width:410px){
 
 
 }
-
-
-
 
 @media(min-width:768px){
-	.photo{
-		max-height: 100vh;
-		height: 100vh;
-}
+
 	
 	.splash{
 		padding-top: 10vh;
@@ -347,7 +467,10 @@ img{
 
 
 @media(min-width:992px){
-
+	.photo{
+		max-height: 110vh;
+		height: 100vh;
+	}
 
 }
 @media(min-width:1200px){

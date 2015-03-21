@@ -26,7 +26,7 @@ $(document).ready(function($) {
 
     new ScrollScene({triggerElement: "#parallax3"})
       .setTween(TweenMax.from("#parallax3 > div", 1, {top: "-80%", ease: Linear.easeNone}))
-      .addTo(controller)
+      .addTo(controller);
      
 
     $(window).load(function() {
@@ -42,28 +42,10 @@ $(document).ready(function($) {
           $('.grid').gridify(options);
      });
 
-     // use with requirejs (new feature added on 9 Oct 2014)
-     require.config({
-         paths: {
-             jquery: 'jquery-1.11.1.min',
-             gridify: 'gridify'
-         }
-     });
-     require( ["jquery", "gridify"],
-         function($) {
-             var options =
-             {
-                 srcNode: 'img',             // grid items (class, node)
-                 margin: '20px',             // margin in pixel, default: 0px
-                 width: '250px',             // grid item width in pixel, default: 220px
-                 max_width: '',              // dynamic gird item width if specified, (pixel)
-                 resizable: true,            // re-layout if window resize
-                 transition: 'all 0.5s ease' // support transition for CSS3, default: all 0.5s ease
-             }
-             $('.grid').gridify(options);
-         }
-     );
+ 
 
       
 
 });
+
+

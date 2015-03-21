@@ -29,6 +29,25 @@
 .size-1of3 {
   width: 33.333%; }
 
+a {
+  color: #f4f4f4 !important;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+  text-decoration: none !important; }
+
+a:hover {
+  cursor: pointer;
+  color: #29837e;
+  text-decoration: none !important; }
+
+p {
+  font-size: 1.2em; }
+
+.white {
+  color: #f4f4f4 !important; }
+
 img {
   width: 100% !important; }
 
@@ -103,9 +122,7 @@ img {
 .splash {
   background-image: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)), url("../img/File8.jpg");
   background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; }
+  background-repeat: no-repeat; }
   .splash h1.splash-text {
     color: rgba(255, 255, 255, 0.9);
     padding-top: 370px;
@@ -139,6 +156,7 @@ img {
     background: #29837e;
     border: 3px solid #29837e; }
 
+/******* PHOTOGRAPHY ********/
 .photo p {
   text-align: center; }
 .photo h2.subHeaders {
@@ -152,12 +170,88 @@ img {
   padding-bottom: 20px; }
 
 .img2 {
-  background-image: url("../img/2.jpeg"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/b2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat; }
 
 .img3 {
-  background-image: url("../img/3.jpg"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/scenary/scene3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
 
-/******* BOOTSTRAP ********/
+/******* BREAK ********/
+/*.break{
+	background: $yellow;
+	height: 8px;
+}*/
+/******* CINEMATAGRAPHY ********/
+.cinema {
+  background: #EEECEA;
+  padding-bottom: 60px;
+  padding-top: 5px; }
+  .cinema p {
+    text-align: center; }
+  .cinema h2.subHeaders {
+    font-size: 1.7em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+    padding-top: 35px; }
+  .cinema p.description {
+    padding-bottom: 20px; }
+  .cinema .pad {
+    margin: 2px; }
+
+.video {
+  margin: 0 auto !important;
+  display: block; }
+
+/******* ABOUT ********/
+.about {
+  padding: 0 25px 0 25px;
+  background: #f6cd4c;
+  padding-bottom: 60px; }
+  .about p {
+    text-align: center; }
+  .about h2.subHeaders {
+    font-size: 1.7em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+    padding-top: 35px; }
+  .about p.description {
+    padding-bottom: 20px; }
+  .about img.me {
+    width: 300px !important;
+    height: auto; }
+
+p.about-description {
+  text-align: left; }
+
+span.resume {
+  padding-top: 15px;
+  display: block; }
+
+/******* RESPONSIVE VIDEO ********/
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 60px;
+  overflow: hidden; }
+
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /******* Added Media Queries ********/
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   padding: 0 !important; }
@@ -179,24 +273,26 @@ img {
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: transparent !important; }
 
-  .photo p {
-    text-align: center; }
-  .photo h2.subHeaders {
-    font-size: 1.7em;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
-    padding-bottom: 15px;
-    padding-top: 35px; }
-  .photo .grid {
-    margin: 0 auto;
-    display: block; } }
-@media (min-width: 768px) {
   .photo {
-    max-height: 100vh;
-    height: 100vh; }
-
+    height: auto; }
+    .photo p {
+      text-align: center; }
+    .photo h2.subHeaders {
+      font-size: 1.7em;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 600;
+      padding-bottom: 15px;
+      padding-top: 35px; }
+    .photo .grid {
+      margin: 0 auto;
+      display: block; } }
+@media (min-width: 768px) {
   .splash {
     padding-top: 10vh; } }
+@media (min-width: 992px) {
+  .photo {
+    max-height: 110vh;
+    height: 100vh; } }
 
 /*# sourceMappingURL=styles.css.map */
