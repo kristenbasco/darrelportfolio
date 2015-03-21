@@ -48,4 +48,14 @@ $(document).ready(function($) {
 
 });
 
+ $(document).ready(function() {
+    $('#fadeUp').addClass('animated fadeInUp'); 
+    $('#fadeIn').addClass('animated fadeIn'); 
+    $('#bounce').addClass('animated bounce'); 
+     
+    $('.adobe').css('width', '90%');
+    $('.html').css('width', '95%');
+    $('.css').css('width', '95%');
+
+});
 
